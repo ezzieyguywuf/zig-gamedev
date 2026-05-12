@@ -316,8 +316,9 @@ fn ensureGitLfs(allocator: std.mem.Allocator, cmd: []const u8) !void {
 
 fn checkGitLfsContent() !void {
     const expected_contents =
-        \\DO NOT EDIT OR DELETE
-        \\This file is used to check if Git LFS content has been downloaded
+        \\version https://git-lfs.github.com/spec/v1
+        \\oid sha256:936686ef9b9485f027086ce1ed7b4f7461d0ceb7eeccb573e48582055ca1c00f
+        \\size 87
     ;
     var buf: [expected_contents.len]u8 = undefined;
     var threaded = std.Io.Threaded.init_single_threaded;
